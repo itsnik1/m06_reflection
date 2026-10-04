@@ -1,0 +1,35 @@
+---
+title: "M06-Reflection Essay-Advanced Data Wrangling"
+author: "Nik Sahami"
+date: today
+format: 
+  html: 
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-link: true
+    embed-resources: true
+editor: visual
+execute: 
+  freeze: auto
+---
+
+# Essay Prompts
+
+## Prompt 1
+
+> *In **Step 1**, you learned how to design stunning presentation slides with Quarto. What's your impression of the Revealjs presentation? Describe its capabilities as you learned from the presentations. What are its strengths and weaknesses compared with PPT?*
+
+My impression of Revealjs is that it is a really useful alternative to PowerPoint, especially for presentations that involve code and technical content. I like that it gives you a lot of control over how the presentation looks and works without having to manually edit every slide. You can use themes, transitions, incremental lists, speaker notes, vertical slides, and even interactive tools like zooming and the chalkboard feature. I also think the ability to fold or highlight parts of code is especially useful for presentations where you are explaining your work.
+
+One of the biggest strengths of Revealjs compared with PowerPoint is that the presentation is created through Quarto, so it can be easily updated and reproduced. Changes to fonts and colors can be applied across the whole presentation instead of changing slides one at a time. It also works really well with code and data outputs, which makes it useful for more analytical presentations.
+
+The main weakness is that Revealjs has a much steeper learning curve than PowerPoint. PowerPoint is easier for quickly moving things around and designing slides visually, but Revealjs requires you to work with Markdown coding and sometimes SCSS. I think PPT is still easier for presentations that need a lot of custom visual placement, and I like being able to drag elements around, but Revealjs is stronger when reproducibility and integration with code are more important.
+
+## Prompt 2
+
+> *In **Step 2**, you were asked to create a Revealjs presentation. **Provide a link to the presentation you published on the web**.*
+
+## Prompt 3
+
+> *My advanced wrangling lecture in **Step 3** introduced new concepts, including how to join relational databases. Pick three different functions, each from a different category. Describe when to use them and give one coding example along with an output for each function. To clarify, you are expected to do literate programming to weave your narratives with the code.*
