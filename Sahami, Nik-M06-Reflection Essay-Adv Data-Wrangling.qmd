@@ -30,7 +30,7 @@ The main weakness is that Revealjs has a much steeper learning curve than PowerP
 
 > *In **Step 2**, you were asked to create a Revealjs presentation. **Provide a link to the presentation you published on the web**.*
 
-Click here to view the presentation
+[Click here to view the presentation](https://01a10805-7236-14ab-c340-17c302cc4d23.share.connect.posit.cloud/)
 
 ## Prompt 3
 
