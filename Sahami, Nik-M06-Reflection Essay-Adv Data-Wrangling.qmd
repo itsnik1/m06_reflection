@@ -30,6 +30,14 @@ The main weakness is that Revealjs has a much steeper learning curve than PowerP
 
 > *In **Step 2**, you were asked to create a Revealjs presentation. **Provide a link to the presentation you published on the web**.*
 
+Click here to view the presentation
+
 ## Prompt 3
 
 > *My advanced wrangling lecture in **Step 3** introduced new concepts, including how to join relational databases. Pick three different functions, each from a different category. Describe when to use them and give one coding example along with an output for each function. To clarify, you are expected to do literate programming to weave your narratives with the code.*
+
+# Appendix
+
+[GitHub Repo Link](https://github.com/itsnik1/m06_reflection)
+
+Published gh pages report
