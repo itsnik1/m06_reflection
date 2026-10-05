@@ -37,11 +37,19 @@ The presentation is about my CEP project with the Collins College of Hospitality
 
 I liked making the presentation and it was pretty easy since I am already familiar with the design of a Quarto document. The coolest parts were how it rendered the revealing information and being able to embed data tables and code into the presentation.
 
+::: callout-warning
+As I mentioned in the last slide of the presentation, `quarto-pub` was not working for me so I had to use `posit-connect-cloud` to publish. This is what was recommended on the `quarto-pub` site nd worked the exact same.
+:::
+
 ## Advanced Wrangling Examples
 
 > *My advanced wrangling lecture in **Step 3** introduced new concepts, including how to join relational databases. Pick three different functions, each from a different category. Describe when to use them and give one coding example along with an output for each function. To clarify, you are expected to do literate programming to weave your narratives with the code.*
 
-::: {.panel-tabset}
+::: callout-tip
+The data in the following examples are not real and are only being used to show the functions.
+:::
+
+:::: panel-tabset
 ### 1. `left_join()`
 
 `left_join()` is useful when you have information stored in two different data frames and want to combine them using a common key. It keeps every row from the first data frame and adds matching information from the second data frame.
@@ -66,10 +74,6 @@ The output shows that all students remain in the dataset, even if they do not ha
 ### 2. `across()`
 
 `across()` is useful when the same function needs to be applied to several columns at once. This is especially helpful when summarizing multiple variables without writing the same code repeatedly.
-
-::: {.callout-note}
-The data in the following examples are not real and are only being used to show the functions.
-:::
 
 ```{r}
 survey <- tibble(engagement = c(4, 3, 5, 2),
@@ -99,11 +103,10 @@ survey
 ```
 
 The output adds a new `engagement_level` column and assigns each student to a category based on their score.
-
-:::
+::::
 
 # Appendix
 
 [GitHub Repo Link](https://github.com/itsnik1/m06_reflection)
 
-Published gh pages report
+[Published gh pages report](https://itsnik1.github.io/m06_reflection/)
