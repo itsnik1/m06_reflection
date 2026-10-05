@@ -4,6 +4,7 @@ author: "Nik Sahami"
 date: today
 format: 
   html: 
+    theme: cosmo
     toc: true
     toc-depth: 4
     number-sections: true
@@ -16,7 +17,7 @@ execute:
 
 # Essay Prompts
 
-## Prompt 1
+## Revealjs vs PPT
 
 > *In **Step 1**, you learned how to design stunning presentation slides with Quarto. What's your impression of the Revealjs presentation? Describe its capabilities as you learned from the presentations. What are its strengths and weaknesses compared with PPT?*
 
@@ -26,18 +27,21 @@ One of the biggest strengths of Revealjs compared with PowerPoint is that the pr
 
 The main weakness is that Revealjs has a much steeper learning curve than PowerPoint. PowerPoint is easier for quickly moving things around and designing slides visually, but Revealjs requires you to work with Markdown coding and sometimes SCSS. I think PPT is still easier for presentations that need a lot of custom visual placement, and I like being able to drag elements around, but Revealjs is stronger when reproducibility and integration with code are more important.
 
-## Prompt 2
+## Presentarion Link
 
 > *In **Step 2**, you were asked to create a Revealjs presentation. **Provide a link to the presentation you published on the web**.*
 
 [Click here to view the presentation](https://01a10805-7236-14ab-c340-17c302cc4d23.share.connect.posit.cloud/)
 
+The presentation is about my CEP project with the Collins College of Hospitality Management. It focuses on the difference in retention between first-time freshmen and transfer students and how factors such as engagement, extracurricular involvement, financial factors, and demographics may help explain that difference. I also included a reproducible table that summarizes the variables I plan to use in the analysis.
+
 I liked making the presentation and it was pretty easy since I am already familiar with the design of a Quarto document. The coolest parts were how it rendered the revealing information and being able to embed data tables and code into the presentation.
 
-## Prompt 3
+## Advanced Wrangling Examples
 
 > *My advanced wrangling lecture in **Step 3** introduced new concepts, including how to join relational databases. Pick three different functions, each from a different category. Describe when to use them and give one coding example along with an output for each function. To clarify, you are expected to do literate programming to weave your narratives with the code.*
 
+::: {.panel-tabset}
 ### 1. `left_join()`
 
 `left_join()` is useful when you have information stored in two different data frames and want to combine them using a common key. It keeps every row from the first data frame and adds matching information from the second data frame.
@@ -57,13 +61,15 @@ students |>
   left_join(scholarships, by = "student_id")
 ```
 
-The output shows that all students remain in the dataset, even if they do not have a matching scholarship record. Itt adds *scholarship* as a new row, and students without a match receive `NA`.
+The output shows that all students remain in the dataset, even if they do not have a matching scholarship record. Itt adds *scholarship* as a new column, and students without a match receive `NA`.
 
 ### 2. `across()`
 
 `across()` is useful when the same function needs to be applied to several columns at once. This is especially helpful when summarizing multiple variables without writing the same code repeatedly.
 
-In this example, I calculate the average of several student engagement measures that I made up.
+::: {.callout-note}
+The data in the following examples are not real and are only being used to show the functions.
+:::
 
 ```{r}
 survey <- tibble(engagement = c(4, 3, 5, 2),
@@ -93,6 +99,8 @@ survey
 ```
 
 The output adds a new `engagement_level` column and assigns each student to a category based on their score.
+
+:::
 
 # Appendix
 
