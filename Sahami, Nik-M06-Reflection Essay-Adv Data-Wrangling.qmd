@@ -32,9 +32,67 @@ The main weakness is that Revealjs has a much steeper learning curve than PowerP
 
 [Click here to view the presentation](https://01a10805-7236-14ab-c340-17c302cc4d23.share.connect.posit.cloud/)
 
+I liked making the presentation and it was pretty easy since I am already familiar with the design of a Quarto document. The coolest parts were how it rendered the revealing information and being able to embed data tables and code into the presentation.
+
 ## Prompt 3
 
 > *My advanced wrangling lecture in **Step 3** introduced new concepts, including how to join relational databases. Pick three different functions, each from a different category. Describe when to use them and give one coding example along with an output for each function. To clarify, you are expected to do literate programming to weave your narratives with the code.*
+
+### 1. `left_join()`
+
+`left_join()` is useful when you have information stored in two different data frames and want to combine them using a common key. It keeps every row from the first data frame and adds matching information from the second data frame.
+
+For example, I can combine student information with scholarship information using a student ID.
+
+```{r}
+library(tidyverse)
+
+students <- tibble(student_id = c(101, 102, 103),
+                   name = c("A", "B", "C"))
+
+scholarships <- tibble(student_id = c(101, 103),
+                       scholarship = c("Yes", "Yes"))
+
+students |>
+  left_join(scholarships, by = "student_id")
+```
+
+The output shows that all students remain in the dataset, even if they do not have a matching scholarship record. Itt adds *scholarship* as a new row, and students without a match receive `NA`.
+
+### 2. `across()`
+
+`across()` is useful when the same function needs to be applied to several columns at once. This is especially helpful when summarizing multiple variables without writing the same code repeatedly.
+
+In this example, I calculate the average of several student engagement measures that I made up.
+
+```{r}
+survey <- tibble(engagement = c(4, 3, 5, 2),
+                 satisfaction = c(5, 4, 4, 3),
+                 involvement = c(3, 2, 5, 4))
+
+survey |>
+  summarize(across(c(engagement, satisfaction, involvement),
+                   mean))
+```
+
+The output provides the mean for each selected variable in one step.
+
+### 3. `case_when()`
+
+`case_when()` is useful when I want to create or recode a variable based on multiple conditions. It works well when categories depend on ranges or several logical rules.
+
+For example, I can group students into engagement levels based on their engagement score.
+
+```{r}
+survey <- survey |>
+  mutate(engagement_level = case_when(engagement >= 4 ~ "High",
+                                      engagement == 3 ~ "Moderate",
+                                      engagement < 3 ~ "Low"))
+
+survey
+```
+
+The output adds a new `engagement_level` column and assigns each student to a category based on their score.
 
 # Appendix
 
